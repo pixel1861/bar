@@ -1,0 +1,945 @@
+
+        /* ========== Базовые стили и переменные ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #ffffff;
+            color: #1e1e1e;
+            line-height: 1.5;
+            transition: background-color 0.3s ease, color 0.2s ease;
+        }
+
+        /* Тёмная тема */
+        body.dark-theme {
+            background-color: #121212;
+            color: #eaeef2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ========== Шапка ========== */
+        .header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        body.dark-theme .header {
+            background-color: #1a1f2a;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #0a1e32;
+            transition: color 0.2s ease;
+        }
+
+        body.dark-theme .logo {
+            color: #aaccff;
+        }
+
+        .navbar {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-item a {
+            text-decoration: none;
+            color: #2d3e50;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-item a:hover {
+            color: #0077ff;
+        }
+
+        body.dark-theme .nav-item a {
+            color: #b0c4de;
+        }
+
+        body.dark-theme .nav-item a:hover {
+            color: #5a9eff;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .search-link {
+            text-decoration: none;
+            color: #2d3e50;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s ease;
+        }
+
+        .search-link:hover {
+            color: #0077ff;
+        }
+
+        body.dark-theme .search-link {
+            color: #b0c4de;
+        }
+
+        body.dark-theme .search-link:hover {
+            color: #5a9eff;
+        }
+
+        .login-link {
+            text-decoration: none;
+            color: #2d3e50;
+            font-weight: 600;
+            padding: 8px 18px;
+            border: 1.5px solid #2d3e50;
+            border-radius: 30px;
+            transition: all 0.2s ease;
+        }
+
+        .login-link:hover {
+            background-color: #2d3e50;
+            color: #ffffff;
+        }
+
+        body.dark-theme .login-link {
+            color: #e0eaff;
+            border-color: #5f7faf;
+        }
+
+        body.dark-theme .login-link:hover {
+            background-color: #2d4b7c;
+            border-color: #2d4b7c;
+            color: white;
+        }
+
+        /* Кнопка переключения темы */
+        .theme-toggle {
+            cursor: pointer;
+            font-size: 1.6rem;
+            line-height: 1;
+            user-select: none;
+            transition: transform 0.2s ease;
+            color: #2d3e50;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        body.dark-theme .theme-toggle {
+            color: #ffd966;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #2d3e50;
+            margin: 3px 0;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        body.dark-theme .bar {
+            background-color: #e0eaff;
+        }
+
+        .mobile-only {
+            display: none;
+        }
+
+        /* ========== Hero секция ========== */
+        .page-hero {
+            padding: 80px 0 50px;
+            text-align: center;
+            background: linear-gradient(145deg, #f9fcff 0%, #eef5fa 100%);
+            transition: background 0.3s ease;
+        }
+
+        body.dark-theme .page-hero {
+            background: linear-gradient(145deg, #1a2635 0%, #0f1a24 100%);
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #0a1e32;
+            margin-bottom: 15px;
+            transition: color 0.2s ease;
+        }
+
+        body.dark-theme .page-hero h1 {
+            color: #d5e6ff;
+        }
+
+        .page-hero p {
+            font-size: 1.2rem;
+            color: #4a5a6e;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        body.dark-theme .page-hero p {
+            color: #9aaec9;
+        }
+
+        /* ========== Общие стили секций ========== */
+        section {
+            padding: 80px 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0a1e32;
+            margin-bottom: 40px;
+            text-align: center;
+            transition: color 0.2s ease;
+        }
+
+        body.dark-theme .section-title {
+            color: #d5e6ff;
+        }
+
+        /* ========== Персональный тренинг ========== */
+        .personal-training {
+            background: #ffffff;
+        }
+
+        body.dark-theme .personal-training {
+            background: #121212;
+        }
+
+        .training-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .training-content {
+            background: #f8fafd;
+            border-radius: 40px;
+            padding: 40px;
+            border: 1px solid #edf2f7;
+            transition: all 0.2s ease;
+        }
+
+        body.dark-theme .training-content {
+            background: #1e2635;
+            border-color: #2d3a4f;
+        }
+
+        .training-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,119,255,0.08);
+            border-color: #d9e9ff;
+        }
+
+        body.dark-theme .training-content:hover {
+            box-shadow: 0 20px 40px rgba(0,119,255,0.2);
+            border-color: #3a6ab0;
+        }
+
+        .training-content h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0077ff;
+            margin-bottom: 20px;
+        }
+
+        .training-content h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #0a1e32;
+            margin: 25px 0 15px;
+            transition: color 0.2s ease;
+        }
+
+        body.dark-theme .training-content h4 {
+            color: #d5e6ff;
+        }
+
+        .training-content p {
+            font-size: 1.1rem;
+            color: #4a5a6e;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            transition: color 0.2s ease;
+        }
+
+        body.dark-theme .training-content p {
+            color: #cbd5e6;
+        }
+
+        .training-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+        .training-list li {
+            padding: 10px 0 10px 35px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="%230077ff"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>') left center no-repeat;
+            background-size: 20px;
+            color: #2d3e50;
+        }
+        body.dark-theme .training-list li {
+            color: #cbd5e6;
+        }
+
+        .price-tag {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #0077ff;
+            margin: 25px 0 20px;
+        }
+        .price-tag small {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #7f8fa4;
+        }
+
+        .training-image {
+            background: #f0f7ff;
+            border-radius: 40px;
+            padding: 40px;
+            text-align: center;
+            border: 1px solid #edf2f7;
+        }
+        body.dark-theme .training-image {
+            background: #232b38;
+            border-color: #3a4557;
+        }
+        .training-image img {
+            max-width: 100%;
+            border-radius: 30px;
+        }
+        .training-image .emoji-icon {
+            font-size: 8rem;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+        .training-image p {
+            font-size: 1.2rem;
+            color: #2d3e50;
+        }
+        body.dark-theme .training-image p {
+            color: #cbd5e6;
+        }
+
+        /* ========== SPA / Массаж ========== */
+        .spa-services {
+            background: #f9fcff;
+        }
+
+        body.dark-theme .spa-services {
+            background: #1a1f2a;
+        }
+
+        .spa-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .spa-card {
+            background: white;
+            border-radius: 32px;
+            padding: 35px 25px;
+            text-align: center;
+            border: 1px solid #e2eef9;
+            transition: all 0.2s ease;
+        }
+
+        body.dark-theme .spa-card {
+            background: #232b38;
+            border-color: #3a4557;
+        }
+
+        .spa-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 30px rgba(0,119,255,0.1);
+            border-color: #0077ff;
+        }
+
+        .spa-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .spa-card h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0a1e32;
+            margin-bottom: 15px;
+            transition: color 0.2s ease;
+        }
+
+        body.dark-theme .spa-card h3 {
+            color: #d5e6ff;
+        }
+
+        .spa-card p {
+            color: #4a5a6e;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            transition: color 0.2s ease;
+        }
+
+        body.dark-theme .spa-card p {
+            color: #aab9d4;
+        }
+
+        .spa-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0077ff;
+            margin: 15px 0;
+        }
+
+        .btn-small {
+            background: transparent;
+            border: 2px solid #0077ff;
+            color: #0077ff;
+            padding: 10px 25px;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-top: 10px;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn-small:hover {
+            background: #0077ff;
+            color: white;
+        }
+
+        body.dark-theme .btn-small {
+            border-color: #4a90e2;
+            color: #4a90e2;
+        }
+        body.dark-theme .btn-small:hover {
+            background: #4a90e2;
+            color: #121212;
+        }
+
+        /* ========== Как записаться ========== */
+        .booking-section {
+            background: white;
+        }
+        body.dark-theme .booking-section {
+            background: #121212;
+        }
+        .booking-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .booking-step {
+            text-align: center;
+        }
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: #0077ff;
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        .booking-step p {
+            font-size: 1.1rem;
+            color: #4a5a6e;
+        }
+        body.dark-theme .booking-step p {
+            color: #aab9d4;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        .btn-primary {
+            background-color: #0077ff;
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 40px;
+            cursor: pointer;
+            box-shadow: 0 10px 25px -8px rgba(0,119,255,0.4);
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-primary:hover {
+            background-color: #005fcc;
+            transform: scale(1.02);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #0077ff;
+            color: #0077ff;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-outline:hover {
+            background: #0077ff;
+            color: white;
+        }
+        body.dark-theme .btn-outline {
+            border-color: #4a90e2;
+            color: #4a90e2;
+        }
+        body.dark-theme .btn-outline:hover {
+            background: #4a90e2;
+            color: #121212;
+        }
+
+        /* ========== Калькулятор услуг ========== */
+        .calculator-section {
+            padding: 60px 0;
+            background: #f9fcff;
+        }
+
+        body.dark-theme .calculator-section {
+            background: #1a1f2a;
+        }
+
+        .calculator-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .calculator-input {
+            background: #ffffff;
+            border-radius: 40px;
+            padding: 40px;
+            border: 1px solid #edf2f7;
+            transition: all 0.2s ease;
+        }
+
+        body.dark-theme .calculator-input {
+            background: #1e2635;
+            border-color: #2d3a4f;
+        }
+
+        .calculator-input h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0a1e32;
+            margin-bottom: 30px;
+        }
+
+        body.dark-theme .calculator-input h2 {
+            color: #d5e6ff;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: #2d3e50;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        body.dark-theme .form-group label {
+            color: #cbd5e6;
+        }
+
+        .form-group select {
+            width: 100%;
+            padding: 16px 20px;
+            font-size: 1rem;
+            border: 1px solid #d0ddee;
+            border-radius: 30px;
+            background: white;
+            transition: all 0.2s ease;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%232d3e50' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+        }
+
+        body.dark-theme .form-group select {
+            background-color: #2c3443;
+            border-color: #3f4b60;
+            color: #f0f4fa;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23e0eaff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+        }
+
+        .checkbox-group {
+            margin: 30px 0;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+            accent-color: #0077ff;
+        }
+
+        .checkbox-item label {
+            font-weight: 500;
+            color: #2d3e50;
+            cursor: pointer;
+        }
+
+        body.dark-theme .checkbox-item label {
+            color: #cbd5e6;
+        }
+
+        .calculate-btn {
+            background-color: #0077ff;
+            color: white;
+            border: none;
+            padding: 18px 32px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 60px;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 10px 25px -8px rgba(0,119,255,0.4);
+        }
+
+        .calculate-btn:hover {
+            background-color: #005fcc;
+            transform: scale(1.02);
+        }
+
+        .calculator-result {
+            background: #ffffff;
+            border-radius: 40px;
+            padding: 40px;
+            border: 1px solid #edf2f7;
+            transition: all 0.2s ease;
+            position: sticky;
+            top: 100px;
+        }
+
+        body.dark-theme .calculator-result {
+            background: #1e2635;
+            border-color: #2d3a4f;
+        }
+
+        .result-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .result-icon {
+            font-size: 2.5rem;
+        }
+
+        .result-header h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0a1e32;
+        }
+
+        body.dark-theme .result-header h3 {
+            color: #d5e6ff;
+        }
+
+        .price-breakdown {
+            background: #f8fafd;
+            border-radius: 30px;
+            padding: 25px;
+            margin: 25px 0;
+            border: 1px solid #e2eef9;
+        }
+
+        body.dark-theme .price-breakdown {
+            background: #232b38;
+            border-color: #3a4557;
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px dashed #e2eef9;
+        }
+
+        .price-item:last-child {
+            border-bottom: none;
+        }
+
+        body.dark-theme .price-item {
+            border-bottom-color: #3a4557;
+        }
+
+        .price-item .label {
+            color: #4a5a6e;
+            font-weight: 500;
+        }
+
+        body.dark-theme .price-item .label {
+            color: #aab9d4;
+        }
+
+        .price-item .value {
+            font-weight: 700;
+            color: #0a1e32;
+        }
+
+        body.dark-theme .price-item .value {
+            color: #d5e6ff;
+        }
+
+        .total-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #e2eef9;
+        }
+
+        body.dark-theme .total-price {
+            border-top-color: #3a4557;
+        }
+
+        .total-price span:first-child {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #0a1e32;
+        }
+
+        body.dark-theme .total-price span:first-child {
+            color: #d5e6ff;
+        }
+
+        .total-price .total-amount {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #0077ff;
+        }
+
+        .result-note {
+            font-size: 0.9rem;
+            color: #7f8fa4;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        body.dark-theme .result-note {
+            color: #8f9fbb;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        /* ========== Футер с адаптацией под тему ========== */
+        .footer {
+            background: #f8fafd;
+            padding: 30px 0;
+            text-align: center;
+            transition: background-color 0.3s ease, color 0.2s ease;
+        }
+
+        body.dark-theme .footer {
+            background: #1a1f2a;
+        }
+
+        .footer p {
+            color: #7f8fa4;
+            transition: color 0.2s ease;
+        }
+
+        body.dark-theme .footer p {
+            color: #8f9fbb;
+        }
+
+        /* ========== Адаптивность ========== */
+        @media (max-width: 992px) {
+            .training-grid {
+                grid-template-columns: 1fr;
+            }
+            .spa-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .booking-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .calculator-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .calculator-result {
+                position: static;
+                top: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                height: 70px;
+            }
+
+            .navbar {
+                order: 3;
+                justify-content: flex-end;
+            }
+
+            .nav-menu {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                gap: 1.2rem;
+                padding: 2rem 0;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                transform: translateY(-150%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                z-index: 99;
+                border-top: 1px solid #eee;
+            }
+
+            body.dark-theme .nav-menu {
+                background-color: #1a1f2a;
+                border-top-color: #2d3a4f;
+            }
+
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .header-actions {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .mobile-only {
+                display: block;
+            }
+
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(6px) rotate(45deg);
+            }
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-6px) rotate(-45deg);
+            }
+
+            .page-hero h1 {
+                font-size: 2.3rem;
+            }
+            .spa-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-buttons {
+                flex-direction: column;
+            }
+            .calculator-input, .calculator-result {
+                padding: 30px 20px;
+            }
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-hero h1 {
+                font-size: 1.9rem;
+            }
+            .training-content {
+                padding: 25px;
+            }
+            .training-content h3 {
+                font-size: 1.6rem;
+            }
+            .calculator-input h2, .result-header h3 {
+                font-size: 1.5rem;
+            }
+            .total-price .total-amount {
+                font-size: 1.8rem;
+            }
+        }
