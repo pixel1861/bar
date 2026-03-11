@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Люминари Фитнес | Контакты</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/contacts.css">
+    <script src="js/contacts.js"></script>
+
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">ЛЮМИНАРИ</div>
+
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Главная</a></li>
+                    <li class="nav-item"><a href="contacts.html" class="nav-link">Контакты</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Сервис</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Блог</a></li>
+                    <li class="nav-item"><a href="questions.html" class="nav-link">Вопросы</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+
+                <span class="theme-toggle" id="themeToggle" title="Переключить тему">🌙</span>
+
+            </div>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Заголовок страницы Контакты -->
+        <section class="page-hero">
+            <div class="container">
+                <h1>Контакты</h1>
+                <p>Свяжитесь с нами любым удобным способом</p>
+            </div>
+        </section>
+
+        <!-- Контактная информация -->
+        <section class="contacts">
+            <div class="container">
+                <div class="contacts-grid">
+                    <!-- Телефон -->
+                    <div class="contact-card">
+                        <div class="contact-icon">📞</div>
+                        <h3>Телефон</h3>
+                        <p><a href="tel:+7 (111) 111-11-11">+7 (111) 111-11-11</a></p>
+                        <p><a href="tel:+7 (111) 111-11-11">+7 (111) 111-11-11</a></p>
+                        <p style="margin-top: 10px; font-size: 0.9rem;">Ежедневно с 8:00 до 23:00</p>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="contact-card">
+                        <div class="contact-icon">✉️</div>
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@millionerfitness.ru">info@millionerfitness.ru</a></p>
+                        <p><a href="mailto:sales@millionerfitness.ru">sales@millionerfitness.ru</a></p>
+                        <p style="margin-top: 10px; font-size: 0.9rem;">Ответим в течение 2 часов</p>
+                    </div>
+
+                    <!-- Адрес -->
+                    <div class="contact-card">
+                        <div class="contact-icon">📍</div>
+                        <h3>Адрес</h3>
+                        <p>г. Москва, Каширское шоссе, 55 А</p>
+                        <p style="margin-top: 10px;"><a href="#" onclick="openMap()">Открыть на карте</a></p>
+                    </div>
+
+                    <!-- Часы работы -->
+                    <div class="contact-card">
+                        <div class="contact-icon">⏰</div>
+                        <h3>Часы работы</h3>
+                        <ul class="work-hours">
+                            <li><span>Пн-Пт</span> <span>07:00 – 23:00</span></li>
+                            <li><span>Сб</span> <span>08:00 – 22:00</span></li>
+                            <li><span>Вс</span> <span>09:00 – 22:00</span></li>
+                            <li><span>Бассейн</span> <span>08:00 – 22:00</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Карта -->
+                <div class="map-section">
+                    <h2 style="margin-bottom: 30px; font-size: 2rem; color: #0a1e32; transition: color 0.2s ease;" class="section-title">Как нас найти</h2>
+                    <div class="map-container">
+                        <!-- Вставка карты через iframe (OpenStreetMap с меткой на Каширское шоссе, 55А) -->
+                        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=37.6487%2C55.6406%2C37.6587%2C55.6506&amp;layer=mapnik&amp;marker=55.6456%2C37.6537" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <!-- Кнопки действий -->
+                <div class="action-buttons">
+                    <a href="tel:+7 (111) 111-11-11" class="btn-primary">Позвонить сейчас</a>
+                    <a href="https://t.me/MySvalentinBot" class="btn-outline">Написать в Telegram</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 ЛЮМИНАРИ Фитнес. Все права защищены. Москва, Каширское шоссе, 55 А</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>

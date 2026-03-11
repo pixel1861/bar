@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>ЛЮМИНАРИ Фитнес | Премиум клуб</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">ЛЮМИНАРИ</div>
+
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Главная</a></li>
+                    <li class="nav-item"><a href="contacts.html" class="nav-link">Контакты</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Сервис</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Блог</a></li>
+                    <li class="nav-item"><a href="questions.html" class="nav-link">Вопросы</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+
+                <span class="theme-toggle" id="themeToggle" title="Переключить тему">🌙</span>
+
+            </div>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero секция -->
+        <section class="hero">
+            <div class="container hero-container">
+                <h1 class="hero-title">ВАШ ИДЕАЛЬНЫЙ СИЛУЭТ ЖДЕТ ВАС</h1>
+                <p class="hero-text">
+                    Добро пожаловать в мир спорта и здорового образа жизни. Здесь вы найдёте всё необходимое для эффективных тренировок и приятного отдыха после них.
+                </p>
+                <a href="https://t.me/MySvalentinBot">
+                    <button class="hero-btn">Присоединиться</button>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Преимущества корпоративного фитнеса -->
+        <section class="benefits">
+            <div class="container">
+                <h2 class="section-title">Преимущества корпоративного фитнеса</h2>
+                <ul class="benefits-list">
+                    <li class="benefits-item"><p>Регулярные занятия фитнесом помогают сотрудникам быть активнее, улучшают физическое самочувствие и повышают продуктивность.</p></li>
+                    <li class="benefits-item"><p>Тимбилдинг в формате фитнес-занятий позволяет сформировать и укрепить эмоциональные связи в команде, создавая доверительную атмосферу.</p></li>
+                    <li class="benefits-item"><p>Абонементы, приобретённые организацией для сотрудников, обходятся значительно дешевле индивидуальных — экономия до 30%.</p></li>
+                    <li class="benefits-item"><p>Возможны различные варианты оплаты, удобные для вашей компании: ежемесячные платежи, квартальные или годовые контракты.</p></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Твой премиум фитнес-клуб -->
+        <section class="premium-club">
+            <div class="container">
+                <h2 class="section-title">Твой премиум фитнес-клуб</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Бассейн 25 м</h3>
+                        <p>Площадь клуба 4000 м²</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>50+</h3>
+                        <p>направлений тренировок</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Собственная</h3>
+                        <p>парковка</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>4000 м²</h3>
+                        <p>пространства для спорта</p>
+                    </div>
+                </div>
+
+                <div class="services-grid">
+                    <span class="service-tag">Pilates</span>
+                    <span class="service-tag">Студия единоборств</span>
+                    <span class="service-tag">Yoga PRO</span>
+                    <span class="service-tag">Бассейн и аквафитнес</span>
+                    <span class="service-tag">Massage</span>
+                    <span class="service-tag">Массажный кабинет</span>
+                    <span class="service-tag">Детский фитнес</span>
+                    <span class="service-tag">Групповые занятия</span>
+                    <span class="service-tag">Relax-зона и банный комплекс</span>
+                    <span class="service-tag">Салон красоты Millennium Beauty</span>
+                    <span class="service-tag">Фитнес-бар</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ЛЮМИНАРИ Фитнес Центр + форма + обратный таймер -->
+        <section class="promo">
+            <div class="container promo-wrapper">
+                <div class="promo-description">
+                    <h2>ЛЮМИНАРИ Фитнес Центр</h2>
+                    <p>Современный фитнес-центр на юге Москвы с максимально комфортной обстановкой, 25-метровым бассейном и гидромассажной зоной. Просторный тренажёрный зал оснащён премиальным оборудованием, а в зоне релакса вас ждут турецкий хаммам, финская сауна и купель с прохладной водой. Наш клуб находится по адресу: Каширское шоссе, 55 А.</p>
+                    <button class="btn-outline" id="openTourModal">Записаться на экскурсию</button>
+
+                    <!-- Обратный таймер до 1 апреля 2026 -->
+                    <div class="countdown-timer" id="countdownTimer">
+                        <div class="timer-badge">
+                            <div class="number" id="days">0</div>
+                            <div class="label">ДНИ</div>
+                        </div>
+                        <div class="timer-badge">
+                            <div class="number" id="hours">0</div>
+                            <div class="label">ЧАСЫ</div>
+                        </div>
+                        <div class="timer-badge">
+                            <div class="number" id="minutes">0</div>
+                            <div class="label">МИНУТЫ</div>
+                        </div>
+                        <div class="timer-badge">
+                            <div class="number" id="seconds">0</div>
+                            <div class="label">СЕКУНДЫ</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="promo-form">
+                    <h3>ПОЛУЧИТЕ 6 МЕСЯЦЕВ ФИТНЕСА В ПОДАРОК!</h3>
+                    <p>Откройте для себя современное фитнес-пространство ЛЮМИНАРИ! Оформите заявку и получите персональный набор привилегий: 30 дней заморозки абонемента, 2 гостевых визита для друзей, 3 ознакомительные тренировки с тренером, а также <strong>6 месяцев фитнеса с бассейном в подарок</strong> при покупке годового абонемента! Предложение действует до 15 марта.</p>
+
+                    <form id="promoForm" onsubmit="event.preventDefault(); alert('Спасибо за заявку! Наш менеджер свяжется с вами в ближайшее время.');">
+                        <div class="form-group">
+                            <input type="text" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="+7 (000) 000-00-00" required>
+                        </div>
+                        <a href="https://t.me/MySvalentinBot">
+                            <button type="submit" class="btn-primary">Получить предложение</button>
+                        </a>
+                        
+                        <p class="agreement">Нажимая на кнопку, вы даёте согласие на обработку персональных данных.</p>
+                    </form>
+
+                    <div class="price-warning">
+                        ⚡ С 1 апреля — плановое повышение цен на клубные карты. Успевайте забронировать по текущей стоимости!
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 ЛЮМИНАРИ Фитнес. Все права защищены. Москва, Каширское шоссе, 55 А | Телефон: +7 (111) 111-11-11</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для записи на экскурсию -->
+    <div class="modal-overlay" id="tourModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeTourModal">&times;</button>
+            <h2 class="modal-title">Запись на экскурсию</h2>
+            <p class="modal-subtitle">Познакомьтесь с клубом лично: осмотрите залы, задайте вопросы и протестируйте оборудование</p>
+            
+            <form id="tourForm" onsubmit="event.preventDefault(); alert('Спасибо за запись! Мы свяжемся с вами для подтверждения времени.'); document.getElementById('tourModal').classList.remove('active'); document.body.style.overflow = '';">
+                <div class="form-group">
+                    <input type="text" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="+7 (000) 000-00-00" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email (необязательно)">
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="" disabled selected>Выберите удобное время</option>
+                        <option value="10:00">10:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="18:00">18:00</option>
+                        <option value="20:00">20:00</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Дополнительные пожелания или вопросы"></textarea>
+                </div>
+                <a href="https://t.me/MySvalentinBot">
+                    <button type="submit" class="btn-primary">Отправить заявку</button>
+                </a>
+                
+                <p class="agreement">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+</html>
